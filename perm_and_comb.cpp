@@ -46,19 +46,21 @@ int main()
 		if(num<0||count<0)
 		{
 			throw "\nINVALID ARGUMENTS";
+			exit(100);
 		}
 	}
-	catch(char *string)
+	catch(char const *string)
 	{
 		cout << string;
+		exit(100);
 	}
 	if(choice==1)
 	{
-		cout << "The permutation of the number is " << permutation(num,count);
+		cout << "\nThe permutation of the number is " << permutation(num,count);
 	}
 	else if(choice==2)
 	{
-		cout << "The combination of the number is " << combination(num,count);
+		cout << "\nThe combination of the number is " << combination(num,count);
 	}
 	else
 	{
